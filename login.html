@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form class="auth-form" method="POST" action="login.php">
+            <h2>Авторизация</h2>
+            <?php if (isset($_GET['error'])): ?>
+                <p style="color: red;"><?php echo urldecode($_GET['error']); ?></p>
+            <?php endif; ?>
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Войти</button>
+            <a href="register.html">Зарегистрироваться</a>
+        </form>
+    </div>
+</body>
+</html>

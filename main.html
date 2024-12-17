@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <div class="search-container">
+        <form class="search-form" method="POST" action="main.php">
+            <label for="search">Введите параметр поиска:</label>
+            <input type="text" id="search" name="book_name" required>
+            <button type="submit">Поиск</button>
+        </form>
+        <button type="button" onclick="goBack()">Назад</button>
+    </div>
+</body>
+</html>
